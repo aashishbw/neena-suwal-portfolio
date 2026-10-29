@@ -16,3 +16,6 @@ footer .brand-logo img{width:125px;height:55px}
 /* Keep WhatsApp separate from the live chat bubble. */
 body.tawk-enabled .whatsapp-chat{bottom:100px}
 @media(max-width:580px){.whatsapp-chat{right:16px;bottom:16px;padding:12px 15px}body.tawk-enabled .whatsapp-chat{bottom:94px}}
+
+/* Download CV button */
+.cv-download{background:#c99070;color:#182333;border:1px solid #c99070;white-space:nowrap;transition:background .2s,color .2s,transform .2s}.cv-download:hover{background:#182333;color:white;transform:translateY(-2px)}

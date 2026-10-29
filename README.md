@@ -18,3 +18,7 @@ The floating WhatsApp button is already linked to the phone number shown on Neen
 
 ## Deployment
 Upload all six files (`index.html`, `style.css`, `script.js`, `chat-config.js`, `neena-logo.png`, `README.md`) to the existing GitHub repository root and commit. The site needs no build command or environment variables.
+
+
+## Download CV
+The Download CV links in the navigation and homepage download `Neena-Suwal-CV.pdf` from the repository root. The original supplied CV is included unchanged.
