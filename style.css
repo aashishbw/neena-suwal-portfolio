@@ -2,7 +2,7 @@
 
 /* Neena Suwal brand logo */
 .brand-logo{display:inline-flex;align-items:center;flex-shrink:0;letter-spacing:normal}
-.brand-logo img{display:block;width:150px;height:70px;object-fit:contain;mix-blend-mode:multiply}
+.brand-logo img{display:block;width:150px;height:70px;object-fit:contain}
 .art-card{background:#faf8f4;padding:18px 12px;transform:rotate(-3deg);overflow:hidden}
 .hero-brand-image{display:block;width:100%;max-height:265px;object-fit:contain}
 .art-card .hero-brand-caption{color:#253247;font-weight:700;letter-spacing:1.8px;line-height:1.7;margin-top:12px}
@@ -19,3 +19,6 @@ body.tawk-enabled .whatsapp-chat{bottom:100px}
 
 /* Download CV button */
 .cv-download{background:#c99070;color:#182333;border:1px solid #c99070;white-space:nowrap;transition:background .2s,color .2s,transform .2s}.cv-download:hover{background:#182333;color:white;transform:translateY(-2px)}
+
+/* Transparent logo: no opaque background or blend mode */
+.brand-logo img,.hero-brand-image{background:transparent;mix-blend-mode:normal}
