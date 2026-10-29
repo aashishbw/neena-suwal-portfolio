@@ -17,3 +17,6 @@ Open `index.html` in any modern browser.
 Edit the text in `index.html`. The email and phone links are clickable.
 
 Note: This website deliberately uses a monogram rather than an invented portrait or unverified social media profiles.
+
+## Logo update
+The official selected circular monogram is included as `neena-logo.png` and used in the navigation, hero and browser favicon. Upload all five files to the root of the existing GitHub repository to trigger a new Vercel deployment.
