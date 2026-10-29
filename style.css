@@ -8,3 +8,11 @@
 .art-card .hero-brand-caption{color:#253247;font-weight:700;letter-spacing:1.8px;line-height:1.7;margin-top:12px}
 footer .brand-logo img{width:125px;height:55px}
 @media(max-width:850px){.brand-logo img{width:125px;height:60px}.hero-brand-image{max-height:190px}}
+
+/* Floating WhatsApp contact button. Tawk.to adds its own chat widget after setup. */
+.whatsapp-chat{position:fixed;right:22px;bottom:24px;z-index:90;display:flex;align-items:center;gap:9px;padding:13px 18px;border-radius:50px;background:#168a58;color:#fff;font-weight:700;font-size:14px;box-shadow:0 8px 26px #18233344;transition:transform .2s,background .2s}
+.whatsapp-chat:hover{transform:translateY(-3px);background:#106b44;color:white}
+.whatsapp-chat span:first-child{font-size:21px;line-height:1}
+/* Keep WhatsApp separate from the live chat bubble. */
+body.tawk-enabled .whatsapp-chat{bottom:100px}
+@media(max-width:580px){.whatsapp-chat{right:16px;bottom:16px;padding:12px 15px}body.tawk-enabled .whatsapp-chat{bottom:94px}}

@@ -1,22 +1,20 @@
-# Neena Suwal — Portfolio Website
+# Neena Suwal — Portfolio with Live Chat + WhatsApp
 
-A responsive, static portfolio based on Neena Suwal's supplied CV.
+Static HTML/CSS/JS portfolio. Deploy to Vercel by uploading the files to the root of your existing GitHub repository.
 
-## Deploy with GitHub + Vercel
-1. Create a new **public** GitHub repository named `neena-suwal-portfolio`.
-2. Upload `index.html`, `style.css`, and `script.js` to the **repository root** (not inside another folder).
-3. Commit the files.
-4. In Vercel, choose **Add New → Project**, import the GitHub repository, leave the framework preset as **Other**, and select **Deploy**.
+## Live chat: free tawk.to account required
+1. Sign up or log in at https://www.tawk.to/.
+2. Create a property for Neena Suwal's website using its **actual deployed Vercel URL**.
+3. Open tawk.to Dashboard → Administration → Chat Widget and locate the embed script.
+4. In that script, find the URL `https://embed.tawk.to/PROPERTY_ID/WIDGET_ID`.
+5. Open `chat-config.js` and replace the two empty strings with those two IDs only.
+6. Commit the updated file to GitHub; Vercel will redeploy. The tawk.to bubble then appears automatically.
+7. Sign in to the tawk.to dashboard or mobile app to receive and answer chats. Set up notifications and availability there.
 
-No Node.js, build step, environment variables, or Codex required.
+**Important:** Live chat is not active until the property/widget IDs are entered. Do not add API secrets to frontend code. AI Assist is optional and subject to its current plan limits.
 
-## Local preview
-Open `index.html` in any modern browser.
+## WhatsApp
+The floating WhatsApp button is already linked to the phone number shown on Neena's CV: +977 9840484114. **Confirm with Neena that this number is on WhatsApp and she wants it publicly linked** before publishing. If not, replace `9779840484114` in `index.html` with her approved WhatsApp number, or remove the WhatsApp button.
 
-## Updating content
-Edit the text in `index.html`. The email and phone links are clickable.
-
-Note: This website deliberately uses a monogram rather than an invented portrait or unverified social media profiles.
-
-## Logo update
-The official selected circular monogram is included as `neena-logo.png` and used in the navigation, hero and browser favicon. Upload all five files to the root of the existing GitHub repository to trigger a new Vercel deployment.
+## Deployment
+Upload all six files (`index.html`, `style.css`, `script.js`, `chat-config.js`, `neena-logo.png`, `README.md`) to the existing GitHub repository root and commit. The site needs no build command or environment variables.
