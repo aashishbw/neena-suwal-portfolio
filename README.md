@@ -22,3 +22,6 @@ Upload all six files (`index.html`, `style.css`, `script.js`, `chat-config.js`, 
 
 ## Download CV
 The Download CV links in the navigation and homepage download `Neena-Suwal-CV.pdf` from the repository root. The original supplied CV is included unchanged.
+
+
+Portrait update: `neena-photo.jpg` is shown in the homepage hero section. Upload it along with the updated `index.html` and `style.css`.
