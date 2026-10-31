@@ -27,3 +27,16 @@ body.tawk-enabled .whatsapp-chat{bottom:100px}
 .portrait-card{padding:0;overflow:hidden;background:#e9ded1;transform:rotate(-3deg);border-radius:10px;box-shadow:25px 30px 0 #e5d9cb}
 .hero-portrait{display:block;width:100%;height:100%;object-fit:cover;object-position:center 45%}
 @media(max-width:580px){.portrait-card{width:min(78vw,300px);height:340px}.hero-art{height:420px}}
+
+/* Place WhatsApp above Botpress's floating chat launcher on mobile and desktop. */
+body.botpress-enabled .whatsapp-chat{bottom:105px}
+@media(max-width:580px){body.botpress-enabled .whatsapp-chat{bottom:100px}}
+
+/* Neena Studio live color controls */
+:root{--studio-primary:#17243b;--studio-accent:#bd8c78;--studio-background:#fbf8f5;--studio-text:#273143}
+body{color:var(--studio-text)}
+.hero,.about,.experience,.education,.skills,.contact{--ns-accent:var(--studio-accent)}
+.hero em,.section-heading em,.contact h2 em,.period{color:var(--studio-accent)!important}
+.btn.primary,.nav-cta{background:var(--studio-primary)!important}
+body{background-color:var(--studio-background)}
+.neena-edit-mode [data-neena-selected],.neena-edit-mode h1:hover,.neena-edit-mode h2:hover,.neena-edit-mode p:hover,.neena-edit-mode h3:hover{outline:2px dashed var(--studio-accent);outline-offset:4px;cursor:pointer}
