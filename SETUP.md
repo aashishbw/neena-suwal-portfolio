@@ -2,10 +2,14 @@
 
 Open `/admin/` after uploading the files to GitHub and deploying to Vercel. In **Visual editor**, click text in the website preview to edit it. The draft is stored in the browser. The website itself is **not changed** until you set up Supabase and click Publish.
 
+## Current connection
+
+Connected to Supabase project `lbryfdvdxruvzmpsjhsl`. Neena uses its own `neena_admin_users` and `neena_site_content` tables; existing application tables are preserved. The requested admin email is `suwalnina12@gmail.com`. Create that Auth user privately, then approve its UUID in `neena_admin_users`.
+
 ## Enable publishing (Supabase)
 1. Create a Supabase project. In **Authentication → Users**, invite/create the editor user with a strong password. Disable public signup unless needed.
 2. In **SQL Editor**, run `supabase-setup.sql` from this package.
-3. Find the approved user's UUID in Authentication → Users, then run: `insert into public.admin_users(user_id) values ('YOUR-USER-UUID');`.
+3. Find the approved user's UUID in Authentication → Users, then run: `insert into public.neena_admin_users(user_id) values ('YOUR-USER-UUID');`.
 4. In `site-config.js`, fill in your project URL and **public anon/publishable key**. Do **not** use the service-role or secret key.
 5. Upload the complete package (including `admin/` directory) to the GitHub repository root and commit. Vercel will redeploy.
 6. Visit `/admin/` → Publish & setup → sign in with approved user credentials. Edit content in Visual editor and press **Publish changes**. Reload the public site.
