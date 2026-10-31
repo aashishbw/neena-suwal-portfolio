@@ -14,5 +14,5 @@ const initial=extract();window.NEENA_EDITOR={fields:FIELDS,initial,apply,extract
 window.addEventListener('message',e=>{if(e.origin!==location.origin||!e.data||e.data.type!=='NEENA_PREVIEW')return;apply(e.data.values);if(e.data.editMode){document.body.classList.add('neena-edit-mode');}else document.body.classList.remove('neena-edit-mode');});
 if(window.parent!==window){document.addEventListener('click',e=>{if(!document.body.classList.contains('neena-edit-mode'))return;const match=Object.entries(FIELDS).find(([,f])=>e.target.closest(f.selector));if(match){e.preventDefault();e.stopPropagation();parent.postMessage({type:'NEENA_SELECT',key:match[0]},location.origin);}else if(e.target.closest('a'))e.preventDefault();},true);}
 const u=window.NEENA_SUPABASE_URL,k=window.NEENA_SUPABASE_ANON_KEY;
-if(u&&k){fetch(u.replace(/\/$/,'')+'/rest/v1/site_content?id=eq.neena&select=content',{headers:{apikey:k,Authorization:'Bearer '+k}}).then(r=>r.ok?r.json():[]).then(rows=>{if(rows[0]?.content)apply(rows[0].content);}).catch(()=>{});}
+if(u&&k){fetch(u.replace(/\/$/,'')+'/rest/v1/neena_site_content?id=eq.neena&select=content',{headers:{apikey:k}}).then(r=>r.ok?r.json():[]).then(rows=>{if(rows[0]?.content)apply(rows[0].content);}).catch(()=>{});}
 })();
