@@ -1,1 +1,25 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Neena Studio | Website Editor</title><link rel="stylesheet" href="/admin/studio.css"></head><body><div class="shell"><aside class="sidebar"><div class="brand"><div class="mark">NS</div><div><b>Neena Studio</b><small>Website editor</small></div></div><div class="status" id="connection">Offline draft mode</div><nav aria-label="Admin navigation"><button class="tab active" data-tab="dashboard">⌂ Dashboard</button><button class="tab" data-tab="visual">✦ Visual editor</button><button class="tab" data-tab="content">☰ Content manager</button><button class="tab" data-tab="design">◈ Colors & design</button><button class="tab" data-tab="seo">◎ SEO settings</button><button class="tab" data-tab="publish">⇧ Publish & setup</button></nav><div class="aside-bottom"><a href="../index.html" target="_blank">↗ Open public website</a><button id="signout" hidden>Sign out</button></div></aside><div class="main"><header class="top"><div><strong id="section-title">Dashboard</strong><span id="save-state" role="status" aria-live="polite">Changes not published</span></div><div class="top-actions"><button id="reset" class="subtle">Reset draft</button><button id="save" class="subtle">Save draft</button><button id="publish" class="primary">Publish changes</button></div></header><div class="work"><div class="panel" id="panel"><div id="panel-content"><h2>Loading your website…</h2><p class="hint">Preparing the content editor and preview.</p></div></div><div class="preview-wrap"><div class="preview-toolbar"><strong>Live preview</strong><div><button id="desktop" class="device selected">Desktop</button><button id="mobile" class="device">Mobile</button></div></div><iframe id="preview" title="Live website preview" src="../index.html"></iframe></div></div></div></div><script src="../site-config.js"></script><script src="/admin/admin.js"></script></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Neena Studio | Admin</title><link rel="stylesheet" href="/admin/studio.css"></head>
+<body>
+<main id="login-screen" class="login-screen">
+<form id="login-form" class="login-card">
+<a class="wordmark" href="/index.html">NS<span>Neena Studio</span></a>
+<p class="eyebrow">WEBSITE ADMIN</p><h1>Your website.<br>Your words.</h1>
+<p class="intro">Sign in to edit Neena’s portfolio directly on the page.</p>
+<label for="email">Admin email</label><input id="email" name="email" type="email" autocomplete="username" required value="suwalnina12@gmail.com">
+<label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required>
+<p id="login-error" class="error" role="alert"></p><button id="login-button" class="primary" type="submit">Sign in to edit →</button>
+<a class="back-link" href="/index.html">View public website ↗</a>
+</form><div class="login-art" aria-hidden="true"><span>NEENA SUWAL</span><p>Make it<br><em>your own.</em></p><small>PORTFOLIO · JOURNAL · EXPERIENCE</small></div>
+</main>
+<section id="workspace" hidden>
+<header class="toolbar"><div class="identity"><b>NS</b><span>Neena Studio<small id="save-state" role="status" aria-live="polite">Ready to edit</small></span></div>
+<div class="view-controls"><label class="sr-only" for="page">Page</label><select id="page"><option value="/index.html">Homepage</option><option value="/blog.html">Journal</option></select><button id="desktop" aria-pressed="true">Desktop</button><button id="mobile" aria-pressed="false">Mobile</button></div>
+<div class="actions"><button id="settings">Settings</button><button id="reset">Discard draft</button><a href="/index.html" target="_blank" rel="noopener">View site ↗</a><button id="signout">Sign out</button><button id="publish" class="primary">Publish changes</button></div></header>
+<div class="edit-strip"><span><i></i> Editing mode · Click any highlighted text and start typing</span><span>Changes go live when you publish</span></div>
+<p id="workspace-error" class="workspace-error" role="alert" hidden></p>
+<div class="canvas"><iframe id="preview" title="Editable website" hidden></iframe><p id="loading">Loading your website…</p></div>
+<aside id="settings-panel" class="settings-panel" hidden><div class="drawer-heading"><h2>Website settings</h2><button id="close-settings" aria-label="Close settings">×</button></div>
+<p class="hint">Text is edited directly on the website. Set colors and search appearance here.</p><div id="settings-fields"></div><div class="backup"><button id="export">Download draft backup</button><label class="file-label" for="import-file">Restore draft backup<input id="import-file" type="file" accept="application/json"></label></div></aside>
+</section><script src="/site-config.js"></script><script src="/admin/admin.js"></script>
+</body></html>
